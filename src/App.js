@@ -3,23 +3,38 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <h1>
+      <ul>
+        <li name='id'>ID
+          <input type='text' />
+          <input type='button' value='CHECK' />
+        </li>
+        <li name='pw'>PW
+          <input type='text' />
+        </li>
+        <li name='pwCheck'>PW Confirm
+          <input type='text' />
+          <span name='pwConfirm'>Mismatched!</span>
+        </li>
+        <li name='nickname'>Nickname
+          <input type='text' />
+          <input type='button' value='CHECK' />
+        </li>
+        <li name='team'>Team
+          <input type='radio' name='teamchek' value='Tigers' />
+          <input type='radio' name='teamchek' value='Lions'/>
+          <input type='radio' name='teamchek' value='Bears'/>
+          <input type='radio' name='teamchek' value='Landers'/>
+          <input type='radio' name='teamchek' value='Twins'/>
+          <input type='radio' name='teamchek' value='Giants'/>
+          <input type='radio' name='teamchek' value='Eagles'/>
+          <input type='radio' name='teamchek' value='Dinos'/>
+          <input type='radio' name='teamchek' value='Wiz'/>
+          <input type='radio' name='teamchek' value='Heros'/>
+        </li>
+      </ul>
+    </h1>
+  )
 }
 
 export default App;
