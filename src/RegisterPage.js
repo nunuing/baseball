@@ -1,6 +1,6 @@
-import './App.css';
+import './RegisterPage.css';
 
-function App() {
+function RegisterPage() {
   const imgURL = '/img/source/symbols/';
   return (
     <h1>
@@ -44,4 +44,4 @@ function App() {
   )
 }
 
-export default App;
+export default RegisterPage;
