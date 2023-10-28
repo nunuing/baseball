@@ -11,6 +11,7 @@ function IdForm() {
       <input type='text' id='id' name='id' value={id} onChange={onChangeId(event=>{
         const currentId = event.target.value;
         setId(currentId);
+        
         const idRegExp = /^[a-zA-z0-9]{4,12}$/;
 
         if (!idRegExp.test(currentId)) {
@@ -20,8 +21,6 @@ function IdForm() {
       <p className='message'>{idMessage}</p>
     </div>
   );
-
-}
 
 function RegisterPage() {
   const imgURL = '/img/source/symbols/';
