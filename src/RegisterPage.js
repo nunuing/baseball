@@ -8,20 +8,25 @@ function IdForm() {
   return (
     <div>
       <label htmlFor='id'>ID </label>
-      <input type='text' id='id' name='id' value={id} onChange={onChangeId(event=>{
+      <input type='text' id='id' name='id' value={id} onChange={event => {
         const currentId = event.target.value;
         setId(currentId);
-        
+
         const idRegExp = /^[a-zA-z0-9]{4,12}$/;
 
         if (!idRegExp.test(currentId)) {
-          setIdMessge("유효한 아이디가 아닙니다.")
+          setIdMessge("invalid ID!");
+          setvalidId(false);
         }
-      })} />
+        else {
+          setIdMessge("valid ID!");
+          setvalidId(true);
+        }
+      }} />
       <p className='message'>{idMessage}</p>
     </div>
   );
-
+}
 function RegisterPage() {
   const imgURL = '/img/source/symbols/';
 
