@@ -27,6 +27,33 @@ function IdForm() {
     </div>
   );
 }
+
+function PwForm() {
+  const [pw, setPw] = useState("");
+  const [pwMessage, setPwMessage] = useState("");
+  const [validPw, setValidPw] = useState(false);
+  
+  return (
+    <div>
+      <label name='pw' htmlFor='pw'>PW </label>
+      <input type='password' id='pw' value={pw} onChange={event => {
+        const currentPw = event.target.value;
+        setPw(currentPw);
+
+        const pwRegExp = /([0-9]|[a-z]|[A-Z]){4,20}/
+        if (!pwRegExp.test(currentPw)) {
+          setPwMessage("invalid PW!");
+          setValidPw(false);
+        }
+        else {
+          setPwMessage("valid PW!");
+          setValidPw(true);
+        }
+      }} />
+      <p className='message'>{pwMessage}</p>
+    </div>
+  );
+}
 function RegisterPage() {
   const imgURL = '/img/source/symbols/';
 
@@ -34,10 +61,7 @@ function RegisterPage() {
     <h1>
 
       <IdForm></IdForm>
-      <div>
-        <label name='pw' htmlFor='pw'>PW </label>
-        <input type='password' />
-      </div>
+      <PwForm></PwForm>
       <div>
         <label name='pwCheck' htmlFor='pwCheck'>PW check </label>
         <input type='password' />
