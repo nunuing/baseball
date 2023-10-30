@@ -47,11 +47,16 @@ function RegisterPage() {
   };
 
   const handlePwCheckInput = e => {
-    if (pw === e.target.value) {
-      pwCheckMessage = "matched!";
+    const currentPwCheck = e.target.value;
+    setPwCheck(currentPwCheck);
+
+    if (pw === currentPwCheck) {
+      setPwCheckMessage("matched!");
+      setValidPwCheck(true);
     }
     else {
-      pwCheckMessage = "mismatched!";
+      setPwCheckMessage("mismatched!");
+      setValidPwCheck(false);
     }
   };
 
