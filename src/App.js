@@ -2,6 +2,9 @@ import './App.css';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import RegisterPage from './RegisterPage';
 import HomePage from './HomePage';
+import Login from './Login';
+import Board from './Board';
+import Game from './Game';
 
 function App() {
   return (
@@ -11,6 +14,12 @@ function App() {
         <Route path='/' element={<HomePage />} />
         {/* 회원가입 */}
         <Route path='/join' element={<RegisterPage />}></Route>
+        {/* 로그인 */}
+        <Route path='/login' element={<Login />}></Route>
+        {/* 게시판 */}
+        <Route path='/board' element={<Board />}></Route>
+        {/* 오늘의 경기 */}
+        <Route path='/game' element={<Game />}></Route>
       </Routes>
     </BrowserRouter>
   );

@@ -11,10 +11,10 @@ function TitleBar() {
                 <img id='cloud4' src='/img/cloud.png' />
             </div>
             <div className='title_navi'>
-                <Link className='link' to='/join'>Board</Link>
-                <Link className='link' to='/join'>Game</Link>
+                <Link className='link' to='/board'>Board</Link>
+                <Link className='link' to='/game'>Game</Link>
                 <img id='title_img' src='/img/Title_heart.png' />
-                <Link className='link' to='/join'>LogIn</Link>
+                <Link className='link' to='/login'>LogIn</Link>
                 <Link className='link' to='/join'>Join</Link>
             </div>
         </div>
