@@ -19,6 +19,8 @@ function RegisterPage() {
   const [nnMessage, setnnMessage] = useState("");
   const [validnn, setvalidnn] = useState(false);
 
+  const [imageSrc, setimageSrc] = useState(process.env.PUBLIC_URL + 'img/default.png');
+
   const handleIdInput = e => {
     const currentId = e.target.value;
     setId(currentId);
@@ -79,6 +81,30 @@ function RegisterPage() {
     }
   };
 
+  const attackClicked = e => {
+    const file = e.target.files[0];
+    console.log(file);
+
+    const correctForm = /(.*?)\.(jpg|jpeg|gif|bmp|png)$/;
+    if (file.size > 3 * 1024 * 1024) {
+      alert("image file is too big!");
+      return;
+    }
+    else if (!correctForm.test(file.name)) {
+      alert("incorrect image file! Plz try again");
+    }
+    
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+
+    return new Promise((resolve) => {
+      reader.onload = () => {
+        setimageSrc(reader.result || null);
+        resolve();
+      };
+    })
+  };
+
   return (
     <h1>
       <div>
@@ -117,8 +143,8 @@ function RegisterPage() {
       <div>
         <label name='profile' htmlFor='profile'>Profile </label>
         <input type='url' />
-        <input type='button' value='attach' />
-        <img name='default' src={process.env.PUBLIC_URL + 'img/default.png'} alt='default' />
+        <input multiple type='file' onChange={attackClicked}/>
+        <img name='profile' id='profile' src={imageSrc} alt='default' />
       </div>
 
       <div>

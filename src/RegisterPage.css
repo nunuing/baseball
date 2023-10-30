@@ -13,4 +13,11 @@
     height: 3%;
     width: 3%;
   }
+
+  #profile {
+    width: 17%;
+    height: 20%;
+    object-fit: cover;
+
+  }
   
