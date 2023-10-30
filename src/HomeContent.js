@@ -1,9 +1,9 @@
-import './App.css';
+import './HomeContent.css';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import RegisterPage from './RegisterPage';
 import HomePage from './HomePage';
 
-function App() {
+function HomeContent() {
   return (
     <BrowserRouter>
       <Routes>
@@ -16,4 +16,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomeContent;
