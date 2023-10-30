@@ -13,7 +13,7 @@ function TitleBar() {
             <div className='title_navi'>
                 <Link className='link' to='/join'>Board</Link>
                 <Link className='link' to='/join'>Game</Link>
-                <img id='title_img' src='/img/Title.png' />
+                <img id='title_img' src='/img/Title_heart.png' />
                 <Link className='link' to='/join'>LogIn</Link>
                 <Link className='link' to='/join'>Join</Link>
             </div>
