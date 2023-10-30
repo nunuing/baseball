@@ -1,0 +1,32 @@
+#title_bar {
+    background-color: #75C2F6;
+    height: 30vh;
+}
+.background {
+    height: 12vh;
+}
+.title_navi {
+    display: table-cell;
+    vertical-align: middle;
+    height: 10vh;
+}
+.link {
+    font-size: 100%;
+    color: white;
+}
+#cloud1 {
+    width: 2vw;
+}
+#cloud2 {
+    width: 2vw;
+}
+#cloud3 {
+    width: 2vw;
+}
+#cloud4 {
+    width: 2vw;
+}
+
+#title_img {
+    height: 100%;
+}

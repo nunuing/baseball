@@ -1,10 +1,12 @@
 import './HomePage.css';
-import { Link } from 'react-router-dom';
+import TitleBar from './TitleBar';
+import HomeContent from './HomeContent';
 
 function HomePage() {
     return (
         <p>
-            <Link className='link' to='/join'>Join</Link>
+            <TitleBar></TitleBar>
+            <HomeContent></HomeContent>
         </p>
     );
 }
