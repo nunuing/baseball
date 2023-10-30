@@ -15,6 +15,10 @@ function RegisterPage() {
   const [pwCheckMessage, setPwCheckMessage] = useState("");
   const [validPwCheck, setValidPwCheck] = useState(false);
 
+  const [nickname, setNickname] = useState("");
+  const [nnMessage, setnnMessage] = useState("");
+  const [validnn, setvalidnn] = useState(false);
+
   const handleIdInput = e => {
     const currentId = e.target.value;
     setId(currentId);
@@ -60,6 +64,21 @@ function RegisterPage() {
     }
   };
 
+  const handleNicknameinput = e => {
+    const currentNickname = e.target.value;
+    setNickname(currentNickname);
+
+    const nnRegExp = /([ㄱ-ㅎ가-힣a-zA-Z0-9]){3,15}/
+    if (nnRegExp.test(currentNickname)) {
+      setnnMessage("valid Nickname");
+      setvalidnn(true);
+    }
+    else {
+      setnnMessage("invalid Nickname");
+      setvalidnn(false);
+    }
+  };
+
   return (
     <h1>
       <div>
@@ -79,8 +98,8 @@ function RegisterPage() {
       </div>
       <div>
         <label name='nickname' htmlFor='nickname'>Nickname </label>
-        <input type='text' />
-        <input type='button' value='CHECK' />
+        <input type='text' value={nickname} onChange={handleNicknameinput} />
+        <p>{nnMessage}</p>
       </div>
       <div>
         <label name='team' htmlFor='team'>Team </label>
