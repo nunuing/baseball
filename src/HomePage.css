@@ -10,7 +10,52 @@
     text-align: center;
 }
 
+#title_bar {
+    background-color: #75C2F6;
+    height: 35vh;
+}
+.background {
+    height: 22vh;
+}
+.title_navi {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 12vh;
+}
 .link {
-    font-size: 30px;
-    color: black;
+    font-size: 200%;
+    color: white;
+}
+#cloud1 {
+    position: relative;
+    top: 19%;
+    right: 22%;
+    width: 6%;
+}
+#cloud2 {
+    position: relative;
+    top: 65%;
+    left: 19%;
+    width: 8%;
+}
+#cloud3 {
+    position: fixed;
+    top: 23%;
+    left: 3%;
+    width: 4%;
+}
+#cloud4 {
+    position: fixed;
+    top: 30%;
+    right: 3%;
+    width: 3%;
+}
+
+#title_img {
+    height: 80%;
+}
+
+.content_background {
+    background-color: #C8966D;
 }
