@@ -5,6 +5,11 @@
   *{
     font-family: 'DNFBitBitv2';
   }
+
+  .content {
+    background-color: #FFE6BC;
+    width: 80%;
+  }
   ul {
     list-style: none;
   }
@@ -21,3 +26,7 @@
 
   }
   
+  .team_select {
+    display: inline-block;
+    
+  }

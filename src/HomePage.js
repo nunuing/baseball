@@ -34,6 +34,8 @@ function HomePage() {
     return (
         <p>
             <TitleBar></TitleBar>
+            <div className='empty_ground'></div>
+            <div className='empty_field'></div>
             <HomeContent></HomeContent>
         </p>
     );
