@@ -4,29 +4,35 @@
   }
   *{
     font-family: 'DNFBitBitv2';
+    align-items: center;
   }
 
   .content {
+    padding: 5%;
+    display: table-cell;
+    text-align: center;
     background-color: #FFE6BC;
-    width: 80%;
+    width: 50vw;
   }
-  ul {
-    list-style: none;
-  }
-  
+
   .symbols {
     height: 3%;
     width: 3%;
   }
 
-  #profile {
-    width: 17%;
-    height: 20%;
-    object-fit: cover;
-
+  #profile_img {
+    display: block;
+    background-color: #D9D9D9;
+    width: 17vw;
+    height: 40vh;
+    object-fit : contain;
   }
   
   .team_select {
-    display: inline-block;
-    
+    display: table;
+  }
+
+  .profile_input {
+    margin: auto;
+    display: table;
   }

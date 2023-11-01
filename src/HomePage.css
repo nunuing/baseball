@@ -4,12 +4,12 @@
     font-weight: 400;
     src: url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')
 }
-html, body {
-    height: 100%;
-    width: 100%;
-}
 * {
+    margin: 0;
     font-family: 'DNFBitBitv2';
+}
+
+.main {
     text-align: center;
 }
 
@@ -26,7 +26,6 @@ html, body {
 }
 
 .content_background {
-    border: #7FB77E solid 1px;
     background-color: #7FB77E;
 }
 

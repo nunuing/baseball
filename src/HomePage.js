@@ -32,7 +32,7 @@ function HomeContent(props) {
 
 function HomePage() {
     return (
-        <p>
+        <p className='main'>
             <TitleBar></TitleBar>
             <div className='empty_ground'></div>
             <div className='empty_field'></div>
