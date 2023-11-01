@@ -5,7 +5,12 @@
   *{
     font-family: 'DNFBitBitv2';
     align-items: center;
-  }
+   } 
+
+   .inputs {
+    display: flex;
+    justify-content: space-between;
+   }
 
   .team_list {
     list-style: none;
@@ -13,9 +18,6 @@
 
   .content {
     padding: 5% 5% 5% 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     background-color: #FFE6BC;
     width: 70%;
   }
@@ -33,12 +35,20 @@
     object-fit : contain;
   }
   
-  .team_select {
-    display: table;
+  #team_select {
+    display: flexbox;
+    flex-direction: row;
+    float: right;
   }
 
-  .profile_input {
+  #profile_input {
     margin: auto;
     display: flex;
     justify-content: start;
+  }
+
+  .input_boxs {
+    border: none;
+    border-bottom: 2px dashed #4F3C2C;
+    background-color: transparent;
   }

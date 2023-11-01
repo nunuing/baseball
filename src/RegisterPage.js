@@ -107,52 +107,47 @@ function RegisterPage() {
 
   return (
     <p className='content'>
-      <div>
+      <div className='inputs'>
         <label htmlFor='id'>ID </label>
-        <input type='text' id='id' name='id' value={id} onChange={handleIdInput} />
+        <input type='text' id='id' name='id' className='input_boxs' value={id} onChange={handleIdInput} />
         <p className='message'>{idMessage}</p>
       </div>
-      <div>
+      <div className='inputs'>
         <label name='pw' htmlFor='pw'>PW </label>
-        <input type='password' id='pw' value={pw} onChange={handlePwInput} />
+        <input type='password' id='pw' className='input_boxs' value={pw} onChange={handlePwInput} />
         <p className='message'>{pwMessage}</p>
       </div>
-      <div>
+      <div className='inputs'>
         <label name='pwCheck' htmlFor='pwCheck'>PW check </label>
-        <input type='password' id='pwChek' value={pwCheck} onChange={handlePwCheckInput} />
+        <input type='password' id='pwChek' className='input_boxs' value={pwCheck} onChange={handlePwCheckInput} />
         <p name='pwConfirm'>{pwCheckMessage}</p>
       </div>
-      <div>
+      <div className='inputs'>
         <label name='nickname' htmlFor='nickname'>Nickname </label>
-        <input type='text' value={nickname} onChange={handleNicknameinput} />
+        <input type='text' value={nickname} className='input_boxs' onChange={handleNicknameinput} />
         <p>{nnMessage}</p>
       </div>
-      <div className='team_select'>
-        <ul className='team_list'>
-          <li>
-            <label name='team' htmlFor='team'>Team </label>
-            <input type='radio' name='teamchek' value='Tigers' /> <img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'tigers.png'} alt='tigers' />
-            <input type='radio' name='teamchek' value='Lions' /> <img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'lions.png'} alt='lions' />
-            <input type='radio' name='teamchek' value='Bears' /> <img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'bears.png'} alt='bears' />
-            <input type='radio' name='teamchek' value='Landers' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'landers.png'} alt='landers' />
-            <input type='radio' name='teamchek' value='Twins' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'twins.png'} alt='twins' />
-          </li>
-          <li>
-            <input type='radio' name='teamchek' value='Giants' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'giants.png'} alt='giants' />
-            <input type='radio' name='teamchek' value='Eagles' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'eagles.png'} alt='eagles' />
-            <input type='radio' name='teamchek' value='Dinos' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'dinos.png'} alt='dinos' />
-            <input type='radio' name='teamchek' value='Wiz' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'wiz.png'} alt='wiz' />
-            <input type='radio' name='teamchek' value='Heros' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'heros.png'} alt='heros' />
-          </li>
-        </ul>
+      <div className='inputs' id='team_select'>
+        <label name='team' htmlFor='team'>Team </label>
+        <input type='radio' name='teamchek' value='Tigers' /> <img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'tigers.png'} alt='tigers' />
+        <input type='radio' name='teamchek' value='Lions' /> <img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'lions.png'} alt='lions' />
+        <input type='radio' name='teamchek' value='Bears' /> <img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'bears.png'} alt='bears' />
+        <input type='radio' name='teamchek' value='Landers' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'landers.png'} alt='landers' />
+        <input type='radio' name='teamchek' value='Twins' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'twins.png'} alt='twins' />
+        <br />
+        <input type='radio' name='teamchek' value='Giants' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'giants.png'} alt='giants' />
+        <input type='radio' name='teamchek' value='Eagles' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'eagles.png'} alt='eagles' />
+        <input type='radio' name='teamchek' value='Dinos' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'dinos.png'} alt='dinos' />
+        <input type='radio' name='teamchek' value='Wiz' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'wiz.png'} alt='wiz' />
+        <input type='radio' name='teamchek' value='Heros' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'heros.png'} alt='heros' />
       </div>
-      <div className='profile_input'>
+      <div className='inputs' id='profile_input'>
         <label name='profile' htmlFor='profile'>Profile </label>
-        <input type='url' />
+        <input type='url' className='input_boxs' />
         <input multiple type='file' onChange={attackClicked} />
         <img name='profile' id='profile_img' src={imageSrc} alt='default' />
       </div>
-      <div>
+      <div className='inputs'>
         <input type='submit' value='Submit' />
         <input type='button' value='Cancle' />
       </div>
