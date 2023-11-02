@@ -1,0 +1,50 @@
+
+#title_bar {
+    border: transparent;
+    background-color: #75C2F6;
+    height: 35vh;
+}
+
+.title_navi {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 12vh;
+}
+
+.background {
+    height: 22vh;
+}
+
+.link {
+    font-size: 1.9vw;
+    color: white;
+}
+#cloud1 {
+    position: relative;
+    top: 2vh;
+    right: 22vw;
+    width: 6vw;
+}
+#cloud2 {
+    position: relative;
+    top: 14vh;
+    left: 40vh;
+    width: 8vw;
+}
+#cloud3 {
+    position: relative;
+    top: 16vh;
+    right: 50vw;
+    width: 4vw;
+}
+#cloud4 {
+    position: relative;
+    top: 19vh;
+    left: 38vw;
+    width: 3vw;
+}
+
+#title_img {
+    height: 6vw;
+}

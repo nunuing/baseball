@@ -1,23 +1,20 @@
 import { useState } from 'react';
 import './RegisterPage.css';
+import TitleBar from './TitleBar';
 function RegisterPage() {
   const imgURL = '/img/source/symbols/';
 
   const [id, setId] = useState("");
   const [idMessage, setIdMessage] = useState("");
-  const [validId, setvalidId] = useState(false);
 
   const [pw, setPw] = useState("");
   const [pwMessage, setPwMessage] = useState("");
-  const [validPw, setValidPw] = useState(false);
 
   const [pwCheck, setPwCheck] = useState("");
   const [pwCheckMessage, setPwCheckMessage] = useState("");
-  const [validPwCheck, setValidPwCheck] = useState(false);
 
   const [nickname, setNickname] = useState("");
   const [nnMessage, setnnMessage] = useState("");
-  const [validnn, setvalidnn] = useState(false);
 
   const [imageSrc, setimageSrc] = useState(process.env.PUBLIC_URL + 'img/default.png');
 
@@ -29,17 +26,14 @@ function RegisterPage() {
 
     if (currentId === "") {
       setIdMessage("");
-      setvalidId(false);
     }
     else if (!idRegExp.test(currentId)) {
       document.documentElement.style.setProperty('--id-color', '#FF522D');
       setIdMessage("invalid ID!");
-      setvalidId(false);
     }
     else {
       document.documentElement.style.setProperty('--id-color', '#068FFF');
       setIdMessage("valid ID!");
-      setvalidId(true);
     }
   };
 
@@ -49,19 +43,16 @@ function RegisterPage() {
 
     const pwRegExp = /([0-9]|[a-z]|[A-Z]){4,20}/
 
-    if (currentPw ==="") {
+    if (currentPw === "") {
       setPwMessage("");
-      setValidPw(false);
     }
     else if (!pwRegExp.test(currentPw)) {
       document.documentElement.style.setProperty('--pw-color', '#FF522D');
       setPwMessage("invalid PW!");
-      setValidPw(false);
     }
     else {
       document.documentElement.style.setProperty('--pw-color', '#068FFF');
       setPwMessage("valid PW!");
-      setValidPw(true);
     }
   };
 
@@ -69,19 +60,16 @@ function RegisterPage() {
     const currentPwCheck = e.target.value;
     setPwCheck(currentPwCheck);
 
-    if (currentPwCheck ==="") {
+    if (currentPwCheck === "") {
       setPwCheckMessage("");
-      setValidPwCheck(false);
     }
     else if (pw === currentPwCheck) {
       document.documentElement.style.setProperty('--pwCheck-color', '#068FFF');
       setPwCheckMessage("matched!");
-      setValidPwCheck(true);
     }
     else {
       document.documentElement.style.setProperty('--pwCheck-color', '#FF522D');
       setPwCheckMessage("mismatched!");
-      setValidPwCheck(false);
     }
   };
 
@@ -92,17 +80,14 @@ function RegisterPage() {
     const nnRegExp = /([ㄱ-ㅎ가-힣a-zA-Z0-9]){3,15}/
     if (currentNickname === "") {
       setnnMessage("");
-      setvalidnn(false);
     }
     else if (nnRegExp.test(currentNickname)) {
       document.documentElement.style.setProperty('--nn-color', '#068FFF');
       setnnMessage("valid Nickname");
-      setvalidnn(true);
     }
     else {
       document.documentElement.style.setProperty('--nn-color', '#FF522D');
       setnnMessage("invalid Nickname");
-      setvalidnn(false);
     }
   };
 
@@ -131,51 +116,60 @@ function RegisterPage() {
   };
 
   return (
-    <p className='content'>
-      <div className='inputs'>
-        <label htmlFor='id'>ID </label>
-        <input type='text' id='id' name='id' className='input_boxs' value={id} onChange={handleIdInput} />
-        <p className='message' id='idMessage'>{idMessage}</p>
-      </div>
-      <div className='inputs'>
-        <label name='pw' htmlFor='pw'>PW </label>
-        <input type='password' id='pw' className='input_boxs' value={pw} onChange={handlePwInput} />
-        <p className='message' id='pwMessage'>{pwMessage}</p>
-      </div>
-      <div className='inputs'>
-        <label name='pwCheck' htmlFor='pwCheck'>PW check </label>
-        <input type='password' id='pwChek' className='input_boxs' value={pwCheck} onChange={handlePwCheckInput} />
-        <p className='message' id='pwCheckMessage' name='pwConfirm'>{pwCheckMessage}</p>
-      </div>
-      <div className='inputs'>
-        <label name='nickname' htmlFor='nickname'>Nickname </label>
-        <input type='text' value={nickname} className='input_boxs' onChange={handleNicknameinput} />
-        <p className='message' id='nnMessage'>{nnMessage}</p>
-      </div>
-      <div className='inputs' id='team_select'>
-        <label name='team' htmlFor='team'>Team </label>
-        <input type='radio' name='teamchek' value='Tigers' /> <img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'tigers.png'} alt='tigers' />
-        <input type='radio' name='teamchek' value='Lions' /> <img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'lions.png'} alt='lions' />
-        <input type='radio' name='teamchek' value='Bears' /> <img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'bears.png'} alt='bears' />
-        <input type='radio' name='teamchek' value='Landers' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'landers.png'} alt='landers' />
-        <input type='radio' name='teamchek' value='Twins' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'twins.png'} alt='twins' />
-        <br />
-        <input type='radio' name='teamchek' value='Giants' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'giants.png'} alt='giants' />
-        <input type='radio' name='teamchek' value='Eagles' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'eagles.png'} alt='eagles' />
-        <input type='radio' name='teamchek' value='Dinos' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'dinos.png'} alt='dinos' />
-        <input type='radio' name='teamchek' value='Wiz' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'wiz.png'} alt='wiz' />
-        <input type='radio' name='teamchek' value='Heros' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'heros.png'} alt='heros' />
-      </div>
-      <div className='inputs' id='profile_input'>
-        <label name='profile' htmlFor='profile'>Profile </label>
-        <input type='url' className='input_boxs' />
-        <input multiple type='file' onChange={attackClicked} />
-        <img name='profile' id='profile_img' src={imageSrc} alt='default' />
-      </div>
-      <div className='input_buttons'>
-        <input className='buttons' id='submit_btn' type='submit' value='Submit' />
-        <input className='buttons' id='cancle_btn' type='button' value='Cancle' />
-      </div>
+    <p className='main'>
+      <TitleBar></TitleBar>
+      <p className='main_content'>
+        <div className='empty_ground'>
+          <div className='content_background'>
+            <p className='content'>
+              <div className='inputs'>
+                <label htmlFor='id'>ID </label>
+                <input type='text' id='id' name='id' className='input_boxs' value={id} onChange={handleIdInput} />
+                <p className='message' id='idMessage'>{idMessage}</p>
+              </div>
+              <div className='inputs'>
+                <label name='pw' htmlFor='pw'>PW </label>
+                <input type='password' id='pw' className='input_boxs' value={pw} onChange={handlePwInput} />
+                <p className='message' id='pwMessage'>{pwMessage}</p>
+              </div>
+              <div className='inputs'>
+                <label name='pwCheck' htmlFor='pwCheck'>PW check </label>
+                <input type='password' id='pwChek' className='input_boxs' value={pwCheck} onChange={handlePwCheckInput} />
+                <p className='message' id='pwCheckMessage' name='pwConfirm'>{pwCheckMessage}</p>
+              </div>
+              <div className='inputs'>
+                <label name='nickname' htmlFor='nickname'>Nickname </label>
+                <input type='text' value={nickname} className='input_boxs' onChange={handleNicknameinput} />
+                <p className='message' id='nnMessage'>{nnMessage}</p>
+              </div>
+              <div className='inputs' id='team_select'>
+                <label name='team' htmlFor='team'>Team </label>
+                <input type='radio' name='teamchek' value='Tigers' /> <img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'tigers.png'} alt='tigers' />
+                <input type='radio' name='teamchek' value='Lions' /> <img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'lions.png'} alt='lions' />
+                <input type='radio' name='teamchek' value='Bears' /> <img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'bears.png'} alt='bears' />
+                <input type='radio' name='teamchek' value='Landers' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'landers.png'} alt='landers' />
+                <input type='radio' name='teamchek' value='Twins' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'twins.png'} alt='twins' />
+                <br />
+                <input type='radio' name='teamchek' value='Giants' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'giants.png'} alt='giants' />
+                <input type='radio' name='teamchek' value='Eagles' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'eagles.png'} alt='eagles' />
+                <input type='radio' name='teamchek' value='Dinos' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'dinos.png'} alt='dinos' />
+                <input type='radio' name='teamchek' value='Wiz' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'wiz.png'} alt='wiz' />
+                <input type='radio' name='teamchek' value='Heros' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'heros.png'} alt='heros' />
+              </div>
+              <div className='inputs' id='profile_input'>
+                <label name='profile' htmlFor='profile'>Profile </label>
+                <input type='url' className='input_boxs' />
+                <input multiple type='file' onChange={attackClicked} />
+                <img name='profile' id='profile_img' src={imageSrc} alt='default' />
+              </div>
+              <div className='input_buttons'>
+                <input className='buttons' id='submit_btn' type='submit' value='Submit' />
+                <input className='buttons' id='cancle_btn' type='button' value='Cancle' />
+              </div>
+            </p>
+          </div>
+        </div>
+      </p>
     </p>
   )
 }
