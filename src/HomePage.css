@@ -10,8 +10,6 @@
 }
 
 .main {
-    display: block;
-    margin: auto;
     text-align: center;
 }
 
@@ -29,6 +27,8 @@
 
 .content_background { 
     background-color: #7FB77E;
+    display: grid;
+    place-items: center;
     padding-top: 5%;
 }
 

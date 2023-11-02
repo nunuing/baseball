@@ -4,7 +4,7 @@ function RegisterPage() {
   const imgURL = '/img/source/symbols/';
 
   const [id, setId] = useState("");
-  const [idMessage, setIdMessge] = useState("");
+  const [idMessage, setIdMessage] = useState("");
   const [validId, setvalidId] = useState(false);
 
   const [pw, setPw] = useState("");
@@ -27,12 +27,18 @@ function RegisterPage() {
 
     const idRegExp = /^[a-zA-z0-9]{4,12}$/;
 
-    if (!idRegExp.test(currentId)) {
-      setIdMessge("invalid ID!");
+    if (currentId === "") {
+      setIdMessage("");
+      setvalidId(false);
+    }
+    else if (!idRegExp.test(currentId)) {
+      document.documentElement.style.setProperty('--id-color', '#FF522D');
+      setIdMessage("invalid ID!");
       setvalidId(false);
     }
     else {
-      setIdMessge("valid ID!");
+      document.documentElement.style.setProperty('--id-color', '#068FFF');
+      setIdMessage("valid ID!");
       setvalidId(true);
     }
   };
@@ -42,11 +48,18 @@ function RegisterPage() {
     setPw(currentPw);
 
     const pwRegExp = /([0-9]|[a-z]|[A-Z]){4,20}/
-    if (!pwRegExp.test(currentPw)) {
+
+    if (currentPw ==="") {
+      setPwMessage("");
+      setValidPw(false);
+    }
+    else if (!pwRegExp.test(currentPw)) {
+      document.documentElement.style.setProperty('--pw-color', '#FF522D');
       setPwMessage("invalid PW!");
       setValidPw(false);
     }
     else {
+      document.documentElement.style.setProperty('--pw-color', '#068FFF');
       setPwMessage("valid PW!");
       setValidPw(true);
     }
@@ -56,11 +69,17 @@ function RegisterPage() {
     const currentPwCheck = e.target.value;
     setPwCheck(currentPwCheck);
 
-    if (pw === currentPwCheck) {
+    if (currentPwCheck ==="") {
+      setPwCheckMessage("");
+      setValidPwCheck(false);
+    }
+    else if (pw === currentPwCheck) {
+      document.documentElement.style.setProperty('--pwCheck-color', '#068FFF');
       setPwCheckMessage("matched!");
       setValidPwCheck(true);
     }
     else {
+      document.documentElement.style.setProperty('--pwCheck-color', '#FF522D');
       setPwCheckMessage("mismatched!");
       setValidPwCheck(false);
     }
@@ -71,11 +90,17 @@ function RegisterPage() {
     setNickname(currentNickname);
 
     const nnRegExp = /([ㄱ-ㅎ가-힣a-zA-Z0-9]){3,15}/
-    if (nnRegExp.test(currentNickname)) {
+    if (currentNickname === "") {
+      setnnMessage("");
+      setvalidnn(false);
+    }
+    else if (nnRegExp.test(currentNickname)) {
+      document.documentElement.style.setProperty('--nn-color', '#068FFF');
       setnnMessage("valid Nickname");
       setvalidnn(true);
     }
     else {
+      document.documentElement.style.setProperty('--nn-color', '#FF522D');
       setnnMessage("invalid Nickname");
       setvalidnn(false);
     }
@@ -110,22 +135,22 @@ function RegisterPage() {
       <div className='inputs'>
         <label htmlFor='id'>ID </label>
         <input type='text' id='id' name='id' className='input_boxs' value={id} onChange={handleIdInput} />
-        <p className='message'>{idMessage}</p>
+        <p className='message' id='idMessage'>{idMessage}</p>
       </div>
       <div className='inputs'>
         <label name='pw' htmlFor='pw'>PW </label>
         <input type='password' id='pw' className='input_boxs' value={pw} onChange={handlePwInput} />
-        <p className='message'>{pwMessage}</p>
+        <p className='message' id='pwMessage'>{pwMessage}</p>
       </div>
       <div className='inputs'>
         <label name='pwCheck' htmlFor='pwCheck'>PW check </label>
         <input type='password' id='pwChek' className='input_boxs' value={pwCheck} onChange={handlePwCheckInput} />
-        <p name='pwConfirm'>{pwCheckMessage}</p>
+        <p className='message' id='pwCheckMessage' name='pwConfirm'>{pwCheckMessage}</p>
       </div>
       <div className='inputs'>
         <label name='nickname' htmlFor='nickname'>Nickname </label>
         <input type='text' value={nickname} className='input_boxs' onChange={handleNicknameinput} />
-        <p>{nnMessage}</p>
+        <p className='message' id='nnMessage'>{nnMessage}</p>
       </div>
       <div className='inputs' id='team_select'>
         <label name='team' htmlFor='team'>Team </label>
@@ -147,9 +172,9 @@ function RegisterPage() {
         <input multiple type='file' onChange={attackClicked} />
         <img name='profile' id='profile_img' src={imageSrc} alt='default' />
       </div>
-      <div className='inputs'>
-        <input type='submit' value='Submit' />
-        <input type='button' value='Cancle' />
+      <div className='input_buttons'>
+        <input className='buttons' id='submit_btn' type='submit' value='Submit' />
+        <input className='buttons' id='cancle_btn' type='button' value='Cancle' />
       </div>
     </p>
   )
