@@ -23,7 +23,7 @@ function TitleBar() {
 }
 
 function HomeContent(props) {
-    return(
+    return (
         <div className='content_background'>
             <RegisterPage></RegisterPage>
         </div>
@@ -34,9 +34,11 @@ function HomePage() {
     return (
         <p className='main'>
             <TitleBar></TitleBar>
-            <div className='empty_ground'></div>
-            <div className='empty_field'></div>
-            <HomeContent></HomeContent>
+            <p className='main_content'>
+                <div className='empty_ground'>
+                    <HomeContent></HomeContent>
+                </div>
+            </p>
         </p>
     );
 }

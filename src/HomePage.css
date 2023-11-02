@@ -13,9 +13,26 @@
     text-align: center;
 }
 
-.empty_ground {
+.main_content {
     background-color: #C8966D;
     padding-top: 5%;
+}
+
+.empty_ground {
+    background-color: #7FB77E;
+    
+    padding-top: 5%;
+    display: grid;
+    place-content: center;
+}
+
+.content_background { 
+    display: grid;
+    background-color: #FFE6BC;
+    border-radius: 3vh 3vh 0 0;
+    place-items: center;
+    padding-top: 6vh;
+    width: 60vw;
 }
 
 #title_bar {
@@ -25,16 +42,11 @@
     height: 35vh;
 }
 
-.content_background { 
-    background-color: #7FB77E;
-    display: grid;
-    place-items: center;
-    padding-top: 5%;
-}
 
 .background {
     height: 22vh;
 }
+
 .title_navi {
     display: flex;
     justify-content: space-around;
