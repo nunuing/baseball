@@ -4,9 +4,10 @@ import TitleBar from './TitleBar';
 
 function HomePage() {
     return (
-        <p className='main'>
+        <div className='main'>
            <TitleBar></TitleBar>
-        </p>
+
+        </div>
     );
 }
 

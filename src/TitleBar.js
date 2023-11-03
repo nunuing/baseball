@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import './TitleBar.css'
 
-function TitleBar() {
+function TitleBar(props) {
+    const state = props;
+    console.log(state.name);
     return (
         <div id='title_bar'>
             <div className='background'>

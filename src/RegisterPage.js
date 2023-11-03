@@ -116,12 +116,12 @@ function RegisterPage() {
   };
 
   return (
-    <p className='main'>
-      <TitleBar></TitleBar>
-      <p className='main_content'>
+    <div className='main'>
+      <TitleBar name={'Join'} ></TitleBar>
+      <div className='main_content'>
         <div className='empty_ground'>
           <div className='content_background'>
-            <p className='content'>
+            <div className='content'>
               <div className='inputs'>
                 <label htmlFor='id'>ID </label>
                 <input type='text' id='id' name='id' className='input_boxs' value={id} onChange={handleIdInput} />
@@ -166,11 +166,11 @@ function RegisterPage() {
                 <input className='buttons' id='submit_btn' type='submit' value='Submit' />
                 <input className='buttons' id='cancle_btn' type='button' value='Cancle' />
               </div>
-            </p>
+            </div>
           </div>
         </div>
-      </p>
-    </p>
+      </div>
+    </div>
   )
 }
 
