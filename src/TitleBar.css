@@ -48,3 +48,19 @@
 #title_img {
     height: 6vw;
 }
+
+#link_board {
+    color: var(--bLink-color);
+}
+
+#link_game {
+    color: var(--gLink-color);
+}
+
+#link_login {
+    color: var(--lLink-color);
+}
+
+#link_join {
+    color: var(--jLink-color);
+}

@@ -117,7 +117,7 @@ function RegisterPage() {
 
   return (
     <div className='main'>
-      <TitleBar name={'Join'} ></TitleBar>
+      <TitleBar state={'join'} ></TitleBar>
       <div className='main_content'>
         <div className='empty_ground'>
           <div className='content_background'>
