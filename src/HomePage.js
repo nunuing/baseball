@@ -5,7 +5,7 @@ import TitleBar from './TitleBar';
 function HomePage() {
     return (
         <div className='main'>
-           <TitleBar></TitleBar>
+           <TitleBar state={'Home'}></TitleBar>
 
         </div>
     );
