@@ -3,7 +3,6 @@ import './TitleBar.css'
 
 function TitleBar(props) {
     const state = props.state;
-    console.log(state);
     if (state === 'board') {
         document.documentElement.style.setProperty('--bLink-color', '#FF522D');
         document.documentElement.style.setProperty('--gLink-color', '#FFFFFF');
