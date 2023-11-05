@@ -15,7 +15,7 @@ function GameInfo() {
 }
 
 function BallInfo() {
-   
+   const bInfos = [];
 }
 function HomePage() {
     return (
