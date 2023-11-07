@@ -1,134 +1,131 @@
 @font-face {
-    font-family: 'DNFBitBitv2';
-    font-style: normal;
-    font-weight: 400;
-    src: url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')
+  font-family: 'DNFBitBitv2';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')
 }
-html, body {
-    width: 100;
+
+html,
+body {
+  width: 100;
 }
 
 * {
-    margin: 0;
-    font-family: 'DNFBitBitv2';
+  margin: 0;
+  font-family: 'DNFBitBitv2';
 }
 
 .main {
-    text-align: center;
+  text-align: center;
 }
 
 .main_content {
-    background-color: #C8966D;
-    padding-top: 10vh;
+  background-color: #C8966D;
+  padding-top: 10vh;
 }
 
 .empty_ground {
-    background-color: #7FB77E;
-    padding-top: 10vh;
-    display: grid;
-    place-content: center;
+  background-color: #7FB77E;
+  padding-top: 10vh;
+  display: grid;
+  place-content: center;
 }
 
-.content_background { 
-    display: grid;
-    background-color: #FFE6BC;
-    border-radius: 3vh 3vh 0 0;
-    place-items: center;
-    padding-top: 8vh;
-    width: 80vw;
-  }
-  
-  .content {
-    padding: 8vh 5vw 8vh 5vw;
-    background-color: #FFF4E0;
-    border-radius: 3vh 3vh 0 0;
-    display: grid;
-    place-items: center;
-    width: 60vw;
-  }
+.score_content {
+  background-color: black;
+  display: grid;
+  place-items: center;
+  padding-top: 8vh;
+  width: 90vw;
+  border-radius: 3vh 3vh 0 0;
+}
 
-  .score_board {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 3vw 7vw repeat(12, 5.5vw);
-    grid-template-rows: repeat(3, 5vh);
-    font-size: 1.6vw;
-  }
+.score_board {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 3vw 7vw repeat(12, 5.5vw);
+  grid-template-rows: repeat(3, 5vh);
+  font-size: 1.6vw;
+}
 
-  .board_info {
-    color: #FFFF;
-  }
+.board_info {
+  color: #FFFF;
+}
 
-  #score14 {
-    background-color: #FF522D;
-    border: #FF522D solid 2px;
-    border-radius: 50%;
-    width: 1.2vw;
-    height: 1.2vw;
-  }
-  
-  .board_bottom {
-    display: grid;
-    grid-template-columns: 20vw 40vw 10vw;
-    margin: 3vh 0 3vh 0;
-    place-items: center;
-  }
+#score14 {
+  background-color: #FF522D;
+  border: #FF522D solid 2px;
+  border-radius: 50%;
+  width: 1.2vw;
+  height: 1.2vw;
+}
 
-  .game_info {
-    display: grid; 
-    grid-template-columns: repeat(4, 5vw);
-    grid-template-rows: repeat(3, 6vh);
-  }
+.board_bottom {
+  display: grid;
+  grid-template-columns: 20vw 40vw 10vw;
+  margin: 3vh 0 3vh 0;
+  place-items: center;
+}
 
-  .infos {
-    color: white;
-    font-size: 2vw;
-    list-style: none;
-  }
+.game_info {
+  display: grid;
+  grid-template-columns: repeat(4, 5vw);
+  grid-template-rows: repeat(3, 6vh);
+}
 
-  .ball_info {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 6vw repeat(3, 4vw);
-    grid-template-rows: repeat(3, 6vh);
-    font-size: 2vw;
-  }
+.infos {
+  color: white;
+  font-size: 2vw;
+  list-style: none;
+}
 
-  .b_infos {
-    color: white;
-  }
+.ball_info {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 6vw repeat(3, 4vw);
+  grid-template-rows: repeat(3, 6vh);
+  font-size: 2vw;
+}
 
-  #b_info1 {
-    background-color: #F9D923;
-    border: #F9D923 solid;
-    border-radius: 50%;
-    height: 2vw;
-    width: 2vw;
-  }
+.b_infos {
+  color: white;
+}
 
-  #b_info2, #b_info11 {
-    background-color: #232323;
-    border: #232323 solid;
-    border-radius: 50%;
-    height: 2vw;
-    width: 2vw;
-  }
+#b_info1 {
+  background-color: #F9D923;
+  border: #F9D923 solid;
+  border-radius: 50%;
+  height: 2vw;
+  width: 2vw;
+}
 
-  #b_info5, #b_info6, #b_info7 {
-    background-color: #36AE7C;
-    border: #36AE7C solid;
-    border-radius: 50%;
-    height: 2vw;
-    width: 2vw;
-  }
+#b_info2,
+#b_info11 {
+  background-color: #232323;
+  border: #232323 solid;
+  border-radius: 50%;
+  height: 2vw;
+  width: 2vw;
+}
 
-  #b_info9, #b_info10 {
-    background-color: #FF522D;
-    border: #FF522D solid;
-    border-radius: 50%;
-    height: 2vw;
-    width: 2vw;
-  }
+#b_info5,
+#b_info6,
+#b_info7 {
+  background-color: #36AE7C;
+  border: #36AE7C solid;
+  border-radius: 50%;
+  height: 2vw;
+  width: 2vw;
+}
+
+#b_info9,
+#b_info10 {
+  background-color: #FF522D;
+  border: #FF522D solid;
+  border-radius: 50%;
+  height: 2vw;
+  width: 2vw;
+}
 
 .hit_info {
   list-style: none;

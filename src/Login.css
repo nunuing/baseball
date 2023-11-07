@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'DNFBitBitv2';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')
+  }
+  
+  * {
+    font-family: 'DNFBitBitv2';
+    align-items: center;
+    color: #4F3C2C;
+  }
+  
+  .main_content {
+    background-color: #C8966D;
+    padding-top: 10vh;
+  }
+  
+  .empty_ground {
+    background-color: #7FB77E;
+    padding-top: 10vh;
+    display: grid;
+    place-content: center;
+  }
+  
+  .content_background { 
+    display: grid;
+    background-color: #FFE6BC;
+    border-radius: 3vh 3vh 0 0;
+    place-items: center;
+    padding-top: 6vh;
+    width: 50vw;
+  }
+  
+  .content {
+    padding: 5vh 5vw 5vh 5vw;
+    background-color: #FFF4E0;
+    width: 20vw;
+    border-radius: 3vh 3vh 0 0;
+    display: grid;
+    place-items: center;
+    
+  }

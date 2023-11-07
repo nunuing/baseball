@@ -23,23 +23,22 @@
   place-content: center;
 }
 
-.content_background { 
+.join_background { 
   display: grid;
   background-color: #FFE6BC;
   border-radius: 3vh 3vh 0 0;
   place-items: center;
-  padding-top: 6vh;
-  width: 50vw;
+  padding-top: 8vh;
+  width: 70vw;
 }
 
-.content {
-  padding: 5vh 5vw 5vh 5vw;
-  background-color: #FFF4E0;
-  width: 70vw;
+.join_content {
+  padding: 8vh 5vw 8vh 5vw;
   border-radius: 3vh 3vh 0 0;
+  background-color: #FFF4E0;
   display: grid;
   place-items: center;
-  
+  width: 50vw;
 }
 
 .inputs {

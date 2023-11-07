@@ -120,8 +120,8 @@ function RegisterPage() {
       <TitleBar state={'join'} ></TitleBar>
       <div className='main_content'>
         <div className='empty_ground'>
-          <div className='content_background'>
-            <div className='content'>
+          <div className='join_background'>
+            <div className='join_content'>
               <div className='inputs'>
                 <label htmlFor='id'>ID </label>
                 <input type='text' id='id' name='id' className='input_boxs' value={id} onChange={handleIdInput} />
