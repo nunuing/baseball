@@ -15,7 +15,15 @@ function GameInfo() {
 }
 
 function BallInfo() {
-   const bInfos = ["S", "", "", "B", "", "", "", "O", "", "", ""];
+   const bInfos = ["S", "", "", "", "B", "", "", "", "O", "", "", ""];
+   const bInfoList = bInfos.map((info, index) => <li className='b_infos' id= {'b_info' + index} key={index}>{info}</li>);
+   return <ul className='ball_info'>{bInfoList}</ul>
+}
+
+function HitInfo() {
+    const hInfos = ["H", "♥︎", "E", "", "FC", ""];
+    const hInfoList = hInfos.map((info, index) => <li className='h_infos' id={'h_info' + index} key={index}>{info}</li>);
+    return <ul className='hit_info'>{hInfoList}</ul>
 }
 function HomePage() {
     return (
@@ -28,6 +36,8 @@ function HomePage() {
                             <ScoreBoard></ScoreBoard>
                             <div className='board_bottom'>
                                 <GameInfo></GameInfo>
+                                <BallInfo></BallInfo>
+                                <HitInfo></HitInfo>
                             </div>
                         </ul>
                     </div>
