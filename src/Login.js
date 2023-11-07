@@ -9,11 +9,11 @@ function Login() {
                 <div className='empty_ground'>
                     <div className='login_background'>
                         <div className='login_content'>
-                            <div className='inputs'>
-                                <label htmlFor='ID'>ID</label><input type='text'></input>
+                            <div className='login_inputs'>
+                                <label htmlFor='ID'>ID</label><input type='text' className='login_info'></input>
                             </div>
-                            <div className='inputs'>
-                                <label htmlFor='PW'>PW</label><input type='password'></input>
+                            <div className='login_inputs'>
+                                <label htmlFor='PW'>PW</label><input type='password' className='login_info'></input>
                             </div>
                             <div className='login_buttons'>
                                 <input className='buttons' id='submit_btn' type='submit' value='Submit' />

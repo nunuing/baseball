@@ -71,12 +71,13 @@
   color: var(--nn-color);
 }
 
-.team_list {
-  list-style: none;
+.join_radio {
+  height: 2vh;
+  width: 2vw;
 }
-
 .symbols {
   height: 3vh;
+  width: 3vh;
 }
 
 #profile_img {

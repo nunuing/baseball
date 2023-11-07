@@ -41,13 +41,13 @@
     place-items: center;
   }
 
-  .inputs {
+  .login_inputs {
     display: grid;
     place-items: center;
     grid-template-columns: 7vw 15vw ;
   }
 
-  input {
+  .login_info {
     background-color: transparent;
     border-top: none;
     border-left: none;
