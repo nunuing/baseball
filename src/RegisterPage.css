@@ -11,12 +11,12 @@
   color: #4F3C2C;
 }
 
-.main_content {
+.join_main {
   background-color: #C8966D;
   padding-top: 10vh;
 }
 
-.empty_ground {
+.join_ground {
   background-color: #7FB77E;
   padding-top: 10vh;
   display: grid;
@@ -41,7 +41,7 @@
   width: 50vw;
 }
 
-.inputs {
+.join_inputs {
   margin: 1vh 0 1vh 0;
   font-size: 1.8vh;
   text-align: left;

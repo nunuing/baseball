@@ -118,51 +118,51 @@ function RegisterPage() {
   return (
     <div className='main'>
       <TitleBar state={'join'} ></TitleBar>
-      <div className='main_content'>
-        <div className='empty_ground'>
+      <div className='join_main'>
+        <div className='join_ground'>
           <div className='join_background'>
             <div className='join_content'>
-              <div className='inputs'>
+              <div className='join_inputs'>
                 <label htmlFor='id'>ID </label>
                 <input type='text' id='id' name='id' className='input_boxs' value={id} onChange={handleIdInput} />
                 <p className='message' id='idMessage'>{idMessage}</p>
               </div>
-              <div className='inputs'>
+              <div className='join_inputs'>
                 <label name='pw' htmlFor='pw'>PW </label>
                 <input type='password' id='pw' className='input_boxs' value={pw} onChange={handlePwInput} />
                 <p className='message' id='pwMessage'>{pwMessage}</p>
               </div>
-              <div className='inputs'>
+              <div className='join_inputs'>
                 <label name='pwCheck' htmlFor='pwCheck'>PW check </label>
                 <input type='password' id='pwChek' className='input_boxs' value={pwCheck} onChange={handlePwCheckInput} />
                 <p className='message' id='pwCheckMessage' name='pwConfirm'>{pwCheckMessage}</p>
               </div>
-              <div className='inputs'>
+              <div className='join_inputs'>
                 <label name='nickname' htmlFor='nickname'>Nickname </label>
                 <input type='text' value={nickname} className='input_boxs' onChange={handleNicknameinput} />
                 <p className='message' id='nnMessage'>{nnMessage}</p>
               </div>
-              <div className='inputs' id='team_select'>
-                <label name='team' htmlFor='team'>Team </label>
+              <div className='join_inputs' id='team_select'>
+                <label name='team' htmlFor='team'>Team</label>
                 <input type='radio' name='teamchek' value='Tigers' /> <img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'tigers.png'} alt='tigers' />
                 <input type='radio' name='teamchek' value='Lions' /> <img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'lions.png'} alt='lions' />
                 <input type='radio' name='teamchek' value='Bears' /> <img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'bears.png'} alt='bears' />
                 <input type='radio' name='teamchek' value='Landers' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'landers.png'} alt='landers' />
                 <input type='radio' name='teamchek' value='Twins' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'twins.png'} alt='twins' />
-                <br />
+                
                 <input type='radio' name='teamchek' value='Giants' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'giants.png'} alt='giants' />
                 <input type='radio' name='teamchek' value='Eagles' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'eagles.png'} alt='eagles' />
                 <input type='radio' name='teamchek' value='Dinos' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'dinos.png'} alt='dinos' />
                 <input type='radio' name='teamchek' value='Wiz' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'wiz.png'} alt='wiz' />
                 <input type='radio' name='teamchek' value='Heros' /><img className='symbols' src={process.env.PUBLIC_URL + imgURL + 'heros.png'} alt='heros' />
               </div>
-              <div className='inputs' id='profile_input'>
+              <div className='join_inputs' id='profile_input'>
                 <label name='profile' htmlFor='profile'>Profile </label>
                 <input type='url' className='input_boxs' />
                 <input multiple type='file' onChange={attackClicked} />
                 <img name='profile' id='profile_img' src={imageSrc} alt='default' />
               </div>
-              <div className='input_buttons'>
+              <div className='join_buttons'>
                 <input className='buttons' id='submit_btn' type='submit' value='Submit' />
                 <input className='buttons' id='cancle_btn' type='button' value='Cancle' />
               </div>
