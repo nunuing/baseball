@@ -27,34 +27,43 @@
     background-color: #FFE6BC;
     border-radius: 3vh 3vh 0 0;
     place-items: center;
-    padding-top: 10vh;
+    padding-top: 5vh;
     width: 75vw;
   }
   
   .board_content {
-    padding: 8vh 5vw 8vh 5vw;
+    padding: 5vh 5vw 8vh 5vw;
     background-color: #FFF4E0;
-    width: 50vw;
+    width: 59vw;
     border-radius: 3vh 3vh 0 0;
     display: grid;
     place-items: center;
   }
-
-  .board_inputs {
-    display: grid;
-    place-items: center;
-    grid-template-columns: 7vw 15vw ;
-    padding: 2vh 0 2vh 0;
-  }
-
   .board_buttons {
     width: 75vw;
     display: grid;
-    grid-template-columns: repeat(2, 8vw);
-    margin: 7vh 0 1vh 0;
+    place-items: center;
+    justify-content: end;
+    grid-template-columns: repeat(2, 7vw);
+    margin: 6vh 0 2vh 0;
   }
   .board_links {
     text-align: center;
     color: white;
   }
   
+  .posts {
+    display: grid;
+    grid-template-columns: 5vw 35vw 8vw 6.5vw 4vw;
+    grid-template-rows: 8vh;
+    font-size: 2vh;
+  }
+
+  .board_number, .board_title, .board_writer ,.board_click, .board_like {
+    color: #4F3C2C;
+  }
+
+  #post1 {
+    border-bottom: #4F3C2C solid 3px;
+    width: 60vw;
+  }
