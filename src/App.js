@@ -5,6 +5,7 @@ import HomePage from './HomePage';
 import Login from './Login';
 import Board from './Board';
 import Game from './Game';
+import Write from './Write';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Route path='/login' element={<Login />}></Route>
         {/* 게시판 */}
         <Route path='/board' element={<Board />}></Route>
+        {/* 게시판 - 글쓰기 */}
+        <Route path='/write' element={<Write />}></Route>
         {/* 오늘의 경기 */}
         <Route path='/game' element={<Game />}></Route>
       </Routes>

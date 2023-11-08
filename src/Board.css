@@ -18,7 +18,6 @@
   
   .board_ground {
     background-color: #7FB77E;
-    padding-top: 10vh;
     display: grid;
     place-content: center;
   }
@@ -47,3 +46,15 @@
     grid-template-columns: 7vw 15vw ;
     padding: 2vh 0 2vh 0;
   }
+
+  .board_buttons {
+    width: 75vw;
+    display: grid;
+    grid-template-columns: repeat(2, 8vw);
+    margin: 7vh 0 1vh 0;
+  }
+  .board_links {
+    text-align: center;
+    color: white;
+  }
+  
