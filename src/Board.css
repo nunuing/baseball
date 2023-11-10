@@ -61,6 +61,7 @@
 
   .board_number, .board_title, .board_writer ,.board_click, .board_like {
     color: #4F3C2C;
+    
   }
 
   #post1 {
