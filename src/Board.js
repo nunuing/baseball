@@ -46,7 +46,6 @@ function Board() {
                             <BoardPosts></BoardPosts>
                             <PageList></PageList>
                         </div>
-
                     </div>
                 </div>
             </div>

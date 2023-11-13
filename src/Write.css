@@ -1,0 +1,115 @@
+* {
+    font-family: 'DNFBitBitv2';
+    align-items: center;
+    color: #4F3C2C;
+  }
+
+.write_main {
+    background-color: #C8966D;
+    padding-top: 10vh;
+}
+
+.write_ground {
+    background-color: #7FB77E;
+    display: grid;
+    place-content: center;
+}
+
+.write_buttons {
+    width: 75vw;
+    display: grid;
+    place-items: center;
+    justify-content: end;
+    grid-template-columns: repeat(2, 7vw);
+    margin: 6vh 0 2vh 0;
+}
+
+.write_links {
+    text-align: center;
+    color: white;
+  }
+
+  .write_background { 
+    display: grid;
+    background-color: #FFE6BC;
+    border-radius: 3vh 3vh 0 0;
+    place-items: center;
+    padding-top: 5vh;
+    width: 75vw;
+  }
+  
+  .write_content {
+    padding: 5vh 5vw 8vh 5vw;
+    background-color: #FFF4E0;
+    width: 59vw;
+    border-radius: 3vh 3vh 0 0;
+    display: grid;
+    place-items: center;
+  }
+
+  .board_wrtie_title {
+    width: 60vw;
+    padding-bottom: 1vh;
+    border-bottom: 3px #4F3C2C solid;
+  }
+
+  .title_input {
+    height: 3vh;
+    text-align: left;
+  }
+
+  .write_inputs {
+    margin-top: 3vh;
+    width: 60vw;
+    
+  }
+ 
+  #post_title {
+    background-color: transparent;
+    border: none;
+    border-bottom: #4F3C2C 3px solid;
+    margin-left: 1vw;
+    width: 54vw;
+  }
+
+#post_content {
+    margin-top: 3vh;
+    background-color: transparent;
+    border: #4F3C2C 3px dashed;
+    width: 57vw;
+    height: 50vh;
+    border-radius: 2vh;
+    padding: 2vh;
+}
+
+.post_file {
+    background-color: transparent;
+    border: none;
+    border-bottom: #4F3C2C 3px dashed;
+    margin-left: 1vw;
+    width: 30vw;
+}
+
+.image_video {
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    text-align: left;
+    width: 50vw;
+}
+
+.image_btns {
+    display: none;
+}
+
+.attach_btn {
+    padding: 0.8vh;
+    font-size: 1.4vh;
+    margin: 0 1vh 0 1vh;
+    border: #4F3C2C 3px solid;
+    border-radius: 1vh;
+}
+
+.file_label {
+    display: inline-block;
+    width: 4vw;
+}
