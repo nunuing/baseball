@@ -13,13 +13,13 @@ function BoardPosts() {
 
     const content_list = [];
     for (let i = 0; i < numbers.length; i++) {
-        content_list.push(<div className='posts' id={'post'+ (i + 1)}>
-        <span className='board_number'>{numbers[i]}</span>
-        <span className='board_title'>{titles[i]}</span>
-        <span className='board_writer'>{writers[i]}</span>
-        <span className='board_click'>{clicks[i]}</span>
-        <span className='board_like'>{likes[i]}</span>
-    </div>);
+        content_list.push(<div className='posts' id={'post' + (i + 1)}>
+            <span className='board_number'>{numbers[i]}</span>
+            <span className='board_title'>{titles[i]}</span>
+            <span className='board_writer'>{writers[i]}</span>
+            <span className='board_click'>{clicks[i]}</span>
+            <span className='board_like' id={'like' + i}>{likes[i]}</span>
+        </div>);
     }
 
     return content_list;
@@ -27,6 +27,8 @@ function BoardPosts() {
 
 function PageList() {
     const pages = ["<<", "<", "1", "2", "3", "4", "5", ">", ">>"];
+    const page_list = pages.map((num) => (<span className='list_number'>{num}</span>));
+    return <div className='page_list'>{page_list}</div>;
 }
 
 function Board() {
@@ -42,7 +44,9 @@ function Board() {
                     <div className='board_background'>
                         <div className='board_content'>
                             <BoardPosts></BoardPosts>
+                            <PageList></PageList>
                         </div>
+
                     </div>
                 </div>
             </div>
