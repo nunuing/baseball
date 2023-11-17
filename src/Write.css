@@ -24,9 +24,12 @@
     margin: 6vh 0 2vh 0;
 }
 
-.write_links {
+.write_btns {
     text-align: center;
+    border: none;
+    background-color: transparent;
     color: white;
+    font-size: 1vw;
   }
 
   .write_background { 

@@ -9,8 +9,8 @@ function Write() {
             <div className='write_main'>
                 <div className='write_ground'>
                     <div className='write_buttons'>
-                        <Link className='write_links'>Confirm</Link>
-                        <Link className='write_links' >Cancle</Link>
+                        <button className='write_btns'>Confirm</button>
+                        <button className='write_btns' >Cancle</button>
                     </div>
                     <div className='write_background'>
                         <div className='write_content'>
