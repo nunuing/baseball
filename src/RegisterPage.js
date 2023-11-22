@@ -91,7 +91,7 @@ function RegisterPage() {
     }
   };
 
-  const attackClicked = e => {
+  const attachClicked = e => {
     const file = e.target.files[0];
     console.log(file);
 
@@ -159,7 +159,7 @@ function RegisterPage() {
               <div className='join_inputs' id='profile_input'>
                 <label name='profile' htmlFor='profile'>Profile </label>
                 <input type='url' className='input_boxs' />
-                <input multiple type='file' onChange={attackClicked} />
+                <input multiple type='file' onChange={attachClicked} />
                 <img name='profile' id='profile_img' src={imageSrc} alt='default' />
               </div>
               <div className='join_buttons'>
