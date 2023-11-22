@@ -1,8 +1,35 @@
 import { Link } from 'react-router-dom';
 import TitleBar from './TitleBar';
 import './Write.css'
+import { useState } from 'react';
 
-function Write() {
+
+  function Write() {
+    const [imageSrc, setimageSrc] = useState();
+    const attackClicked = e => {
+        const file = e.target.files[0];
+        console.log(file);
+    
+        const correctForm = /(.*?)\.(jpg|jpeg|gif|bmp|png)$/;
+        if (file.size > 3 * 1024 * 1024) {
+          alert("image file is too big!");
+          return;
+        }
+        else if (!correctForm.test(file.name)) {
+          alert("incorrect image file! Plz try again");
+        }
+    
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+    
+        return new Promise((resolve) => {
+          reader.onload = () => {
+            setimageSrc(reader.result || null);
+            resolve();
+          };
+        })
+      };
+
     return (
         <div className='main'>
             <TitleBar state={'board'} ></TitleBar>
@@ -25,14 +52,14 @@ function Write() {
                                 <div className='image_video'>
                                     <label className='file_label'>image : </label>
                                     <input className='post_file' type='url' />
-                                    <label className='attach_btn'>Attach</label>
-                                    <input className='image_btns' type='file' />
+                                    <label className='attach_btn' for='image_input'>Attach</label>
+                                    <input className='image_btns' id='image_input' multiple type='file' />
                                 </div>
                                 <div className='image_video'>
                                     <label className='file_label'>video :</label>
                                     <input className='post_file' type='url' />
-                                    <label className='attach_btn'>Attach</label>
-                                    <input className='image_btns' type='file' />
+                                    <label className='attach_btn' for='video_input'>Attach</label>
+                                    <input className='image_btns' id='video_input' multiple type='file'  onChange={attackClicked} />
                                 </div>
                             </div>
                         </div>
