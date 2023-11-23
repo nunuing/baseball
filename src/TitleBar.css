@@ -2,18 +2,18 @@
 #title_bar {
     border: transparent;
     background-color: #75C2F6;
-    height: 35vh;
+    height: 20vw;
 }
 
 .title_navi {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
-    height: 12vh;
+    height: 7vw;
 }
 
 .background {
-    height: 22vh;
+    height: 12vw;
 }
 
 .link {
@@ -22,25 +22,25 @@
 }
 #cloud1 {
     position: relative;
-    top: 2vh;
+    top: 1vw;
     right: 22vw;
     width: 6vw;
 }
 #cloud2 {
     position: relative;
-    top: 14vh;
-    left: 40vh;
+    top: 8vw;
+    left: 20vw;
     width: 8vw;
 }
 #cloud3 {
     position: relative;
-    top: 16vh;
+    top: 8vw;
     right: 50vw;
     width: 4vw;
 }
 #cloud4 {
     position: relative;
-    top: 19vh;
+    top: 8vw;
     left: 38vw;
     width: 3vw;
 }

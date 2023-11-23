@@ -6,8 +6,8 @@ import axois from "axios";
 
 
 function Write() {
-    const [imageSrc, setimageSrc] = useState();
-    const [videoSrc, setvideoSrc] = useState();
+    const [imageSrc, setimageSrc] = useState("");
+    const [videoFilePath, setVideoPath] = useState("");
     const image_attach_clicked = e => {
         const file = e.target.files[0];
         console.log(file);
@@ -39,7 +39,15 @@ function Write() {
         };
         formData.append("file", files[0]);
 
-        axois.post("/a")
+        axois.post("/api/video/uploadfiles", formData, config).then((res) => {
+            if (res.data.success) {
+                let variable = {
+                    filePath : res.data.filePath,
+                    fileName : res.data.fileName,
+                };
+                setVideoPath(res.data.filePath);
+            }
+        });
 
     };
 

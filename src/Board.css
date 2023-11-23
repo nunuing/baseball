@@ -55,8 +55,8 @@
   .posts {
     display: grid;
     grid-template-columns: 5vw 35vw 8vw 6.5vw 4vw;
-    grid-template-rows: 8vh;
-    font-size: 2vh;
+    grid-template-rows: 5vw;
+    font-size: 1.1vw;
   }
   
   .board_number, .board_title, .board_writer ,.board_click, .board_like {
