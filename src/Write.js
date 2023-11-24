@@ -48,7 +48,6 @@ function Write() {
                 setVideoPath(res.data.filePath);
             }
         });
-
     };
 
     return (
