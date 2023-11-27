@@ -8,6 +8,8 @@ import Game from './Game';
 import Write from './Write';
 
 function App() {
+  const url = 'http://localhost:8000/api/test';
+  fetch(url).then((res) => res.json()).then(data => console.log(data));
   return (
     <BrowserRouter>
       <Routes>
