@@ -8,14 +8,14 @@ import Game from './Game';
 import Write from './Write';
 
 function App() {
-  const url = 'http://localhost:8000/api/test';
-  fetch(url).then((res) => res.json()).then(data => console.log(data));
+  const url = 'http://localhost:8000/';
+  
   return (
     <BrowserRouter>
       <Routes>
         {/* 홈화면 */}
         <Route path='/' element={<HomePage />} />
-        {/* 회원가입 */}
+        {/* 회원가입 */}  
         <Route path='/join' element={<RegisterPage />}></Route>
         {/* 로그인 */}
         <Route path='/login' element={<Login />}></Route>
