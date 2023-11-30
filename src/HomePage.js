@@ -1,5 +1,20 @@
 import './HomePage.css';
 import TitleBar from './TitleBar';
+import React, {useState} from 'react';
+import axios from 'axios';
+import { response } from 'express';
+
+function DBTest() {
+    const [user, setUser] = useState('');
+    axios.get("http://127.0.0.1:8000/dbTest").then((response) => {
+        setUser(response.data);
+        console.log(response.data);
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+};
+
 function ScoreBoard() {
     const list_score = ["", "", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12",
         "", "BASE", "-", "W", "E", "L", "C", "O", "M", "E", "-", "-", "-", "-",
@@ -30,6 +45,7 @@ function HomePage() {
         <div className='main'>
             <TitleBar state={'Home'}></TitleBar>
             <div className='main_content'>
+                <div id="db_test"></div>
                 <div className='empty_ground'>
                     <div className='score_content'>
                         <ul className='score_board'>
